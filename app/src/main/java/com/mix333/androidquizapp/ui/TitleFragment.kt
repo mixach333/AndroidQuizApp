@@ -10,7 +10,7 @@ import com.mix333.androidquizapp.databinding.FragmentTitleBinding
 
 class TitleFragment : Fragment() {
     private var _binding : FragmentTitleBinding? = null
-    private val binding = _binding!!
+    private val binding get() = requireNotNull(_binding)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

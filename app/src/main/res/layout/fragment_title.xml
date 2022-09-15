@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
         tools:context=".ui.TitleFragment">
 
-        <!-- TODO: Update blank fragment layout -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment" />
+        <ImageView
+            android:layout_width="207dp"
+            android:layout_height="183dp"
+            android:layout_margin="20dp"
+            android:adjustViewBounds="false"
+            android:src="@drawable/ic_outline_adb_24"
+            android:tint="#3AFF33"/>
 
-    </FrameLayout>
+        <Button
+            android:id="@+id/button"
+            style="@style/roundedButtonBigRedGrey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/start_the_game"
+            app:cornerRadius="10dp" />
+
+    </LinearLayout>
 </layout>
