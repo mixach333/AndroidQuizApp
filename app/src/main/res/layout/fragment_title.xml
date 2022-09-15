@@ -17,7 +17,7 @@
             android:layout_margin="20dp"
             android:adjustViewBounds="false"
             android:src="@drawable/ic_outline_adb_24"
-            android:tint="#3AFF33"/>
+            app:tint="#3AFF33" />
 
         <Button
             android:id="@+id/button"
