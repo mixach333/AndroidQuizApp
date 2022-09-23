@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/titleFragment"
         android:name="com.mix333.androidquizapp.ui.TitleFragment"
-        android:label="TitleFragment" >
+        android:label="AndroidQuizApp">
         <action
             android:id="@+id/action_titleFragment_to_gameFragment"
             app:destination="@id/gameFragment" />
@@ -21,11 +21,15 @@
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.mix333.androidquizapp.ui.AboutFragment"
-        android:label="AboutFragment" />
+        android:label="About" >
+        <action
+            android:id="@+id/action_aboutFragment_to_titleFragment"
+            app:destination="@id/titleFragment" />
+    </fragment>
     <fragment
         android:id="@+id/gameFragment"
         android:name="com.mix333.androidquizapp.ui.GameFragment"
-        android:label="GameFragment" >
+        android:label="The Game">
         <action
             android:id="@+id/action_gameFragment_to_gameWonFragment"
             app:destination="@id/gameWonFragment" />
@@ -52,5 +56,9 @@
     <fragment
         android:id="@+id/rulesFragment"
         android:name="com.mix333.androidquizapp.ui.RulesFragment"
-        android:label="RulesFragment" />
+        android:label="Rules" >
+        <action
+            android:id="@+id/action_rulesFragment_to_titleFragment"
+            app:destination="@id/titleFragment" />
+    </fragment>
 </navigation>

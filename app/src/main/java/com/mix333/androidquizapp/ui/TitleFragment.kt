@@ -19,7 +19,13 @@ class TitleFragment : Fragment() {
     ): View? {
         _binding = FragmentTitleBinding.inflate(inflater, container, false)
         binding.startTheGameButton.setOnClickListener{
+            it.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)
+        }
+        binding.aboutButton.setOnClickListener {
             it.findNavController().navigate(R.id.action_titleFragment_to_aboutFragment)
+        }
+        binding.readTheRulesButton.setOnClickListener {
+            it.findNavController().navigate(R.id.action_titleFragment_to_rulesFragment)
         }
         return binding.root
     }

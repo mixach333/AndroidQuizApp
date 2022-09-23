@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
+import com.mix333.androidquizapp.R
 import com.mix333.androidquizapp.databinding.FragmentAboutBinding
 
 class AboutFragment : Fragment() {
@@ -17,6 +19,9 @@ class AboutFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentAboutBinding.inflate(inflater, container, false)
+        binding.backToTitleButton.setOnClickListener {
+            it.findNavController().navigate(R.id.action_aboutFragment_to_titleFragment)
+        }
         return binding.root
     }
 

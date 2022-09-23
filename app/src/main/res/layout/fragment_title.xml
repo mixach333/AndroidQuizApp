@@ -24,21 +24,22 @@
                 style="@style/TextViewHeaderStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:gravity="center"
                 android:text="@string/welcome_text"
-                tools:ignore="TextContrastCheck,TextContrastCheck" />
+                tools:ignore="TextContrastCheck" />
         </androidx.cardview.widget.CardView>
 
         <ImageView
-            android:layout_width="207dp"
-            android:layout_height="183dp"
-            android:layout_margin="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:adjustViewBounds="false"
+            android:contentDescription="@string/the_image"
+            android:scaleType="fitCenter"
             android:src="@drawable/ic_outline_adb_24"
             app:tint="#3AFF33"
-            tools:ignore="ImageContrastCheck"
-            android:contentDescription="@string/the_image" />
+            tools:ignore="ImageContrastCheck" />
         <View
             android:layout_width="wrap_content"
             android:layout_height="0dp"
