@@ -5,13 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.mix333.androidquizapp.R
 import com.mix333.androidquizapp.databinding.FragmentAboutBinding
-import com.mix333.androidquizapp.databinding.FragmentTitleBinding
 
 class AboutFragment : Fragment() {
     private var _binding : FragmentAboutBinding? = null
-    private val binding = _binding!!
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

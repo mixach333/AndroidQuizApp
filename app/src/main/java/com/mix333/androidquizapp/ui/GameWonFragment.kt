@@ -11,7 +11,7 @@ import com.mix333.androidquizapp.databinding.FragmentTitleBinding
 
 class GameWonFragment : Fragment() {
     private var _binding : FragmentGameWonBinding? = null
-    private val binding = _binding!!
+    private val binding get()= _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

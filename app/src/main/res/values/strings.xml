@@ -3,4 +3,11 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="start_the_game">Start the game</string>
+    <string name="about_text">Here is an app which can help you to practice your Android and Kotlin skills. It\'s first version, where only tests with one version available.\n \nIn the future, multi-optional tests and graphic connection tests will be added.</string>
+    <string name="about_explanation">You can go back to the title screen by pressing the button below or tapping on the back button. On the title screen you can start testing your skills.</string>
+    <string name="back_to_title_button_text">Back to Title</string>
+    <string name="read_the_rules">Read the Rules</string>
+    <string name="read_about_the_app">Read about the App</string>
+    <string name="welcome_text">Welcome to the Android Quiz App. Here you can test your knowledges of Android and Kotlin. The amount of questions is dynamic, but at least 5. Passing this test, you can be sure that you know basics of Android Developement.</string>
+    <string name="the_image">the image</string>
 </resources>

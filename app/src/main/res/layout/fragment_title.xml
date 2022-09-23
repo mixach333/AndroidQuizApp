@@ -6,10 +6,29 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
+        android:gravity="center|top"
         android:orientation="vertical"
         android:padding="16dp"
         tools:context=".ui.TitleFragment">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp">
+
+            <TextView
+                android:id="@+id/welcome_text_view"
+                style="@style/TextViewHeaderStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="@string/welcome_text"
+                tools:ignore="TextContrastCheck,TextContrastCheck" />
+        </androidx.cardview.widget.CardView>
 
         <ImageView
             android:layout_width="207dp"
@@ -17,15 +36,40 @@
             android:layout_margin="20dp"
             android:adjustViewBounds="false"
             android:src="@drawable/ic_outline_adb_24"
-            app:tint="#3AFF33" />
+            app:tint="#3AFF33"
+            tools:ignore="ImageContrastCheck"
+            android:contentDescription="@string/the_image" />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/start_the_game_button"
             style="@style/roundedButtonBigRedGrey"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:text="@string/start_the_game"
+            app:cornerRadius="10dp" />
+
+        <Button
+            android:id="@+id/read_the_rules_button"
+            style="@style/roundedButtonBigRedGrey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/read_the_rules"
+            app:cornerRadius="10dp" />
+
+        <Button
+            android:id="@+id/about_button"
+            style="@style/roundedButtonBigRedGrey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/read_about_the_app"
             app:cornerRadius="10dp" />
 
     </LinearLayout>
