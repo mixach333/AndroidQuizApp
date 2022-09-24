@@ -8,6 +8,8 @@
     <string name="back_to_title_button_text">Back to Title</string>
     <string name="read_the_rules">Read the Rules</string>
     <string name="read_about_the_app">Read about the App</string>
-    <string name="welcome_text">Welcome to the Android Quiz App. Here you can test your knowledges of Android and Kotlin. The amount of questions is dynamic, but at least 5. Passing this test, you can be sure that you know basics of Android Developement.</string>
+    <string name="welcome_text">Welcome to the Android Quiz App. Here you can test your knowledge of Android and Kotlin. The amount of questions is dynamic, but at least 5. Passing this test, you can be sure that you know basics of Android Developement.</string>
     <string name="the_image">the image</string>
+    <string name="rules_text_first">Select the answer from the options given. Each time you get an answer correct, you advance to the next question.</string>
+    <string name="rules_text_second">If you get the answer wrong, your game ends! You can return to the title screen using up or back from within the game screen, and this will also end your game.</string>
 </resources>

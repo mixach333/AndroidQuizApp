@@ -36,7 +36,6 @@
             android:layout_margin="10dp"
             android:adjustViewBounds="false"
             android:contentDescription="@string/the_image"
-            android:scaleType="fitCenter"
             android:src="@drawable/ic_outline_adb_24"
             app:tint="#3AFF33"
             tools:ignore="ImageContrastCheck" />
