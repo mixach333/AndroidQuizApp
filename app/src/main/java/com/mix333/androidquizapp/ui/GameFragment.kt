@@ -25,10 +25,10 @@ class GameFragment : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.questionText.text = viewModel.question.text
-        binding.radioButtonAnswer1.text = viewModel.question.answers[0]
-        binding.radioButtonAnswer2.text = viewModel.question.answers[1]
-        binding.radioButtonAnswer3.text = viewModel.question.answers[2]
-        binding.radioButtonAnswer4.text = viewModel.question.answers[3]
+        binding.radioButtonAnswer1.text = viewModel.shuffledAnswers[0]
+        binding.radioButtonAnswer2.text = viewModel.shuffledAnswers[1]
+        binding.radioButtonAnswer3.text = viewModel.shuffledAnswers[2]
+        binding.radioButtonAnswer4.text = viewModel.shuffledAnswers[3]
     }
 
     override fun onDestroyView() {

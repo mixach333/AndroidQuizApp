@@ -20,7 +20,7 @@ class GameViewModel : ViewModel() {
 
     init {
         viewModelScope.launch {
-            questionsList = receiverQuestionsListRepository.receiveQuestions()
+            questionsList = receiverQuestionsListRepository.receiveQuestions().shuffled().toMutableList()
             question = questionsList[0]
             shuffledAnswers = question.answers.shuffled()
             questionsQuantity = receiveQuestionsCount()
