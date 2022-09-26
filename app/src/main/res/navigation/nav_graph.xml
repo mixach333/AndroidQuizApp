@@ -48,7 +48,7 @@
     <fragment
         android:id="@+id/gameWonFragment"
         android:name="com.mix333.androidquizapp.ui.GameWonFragment"
-        android:label="GameWonFragment" >
+        android:label="You passed the test!">
         <action
             android:id="@+id/action_gameWonFragment_to_titleFragment"
             app:destination="@id/titleFragment" />

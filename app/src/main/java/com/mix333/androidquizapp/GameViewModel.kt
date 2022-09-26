@@ -12,10 +12,10 @@ import kotlinx.coroutines.launch
 class GameViewModel : ViewModel() {
     private val receiverQuestionsListRepository = ReceiverQuestionsListRepository()
     private lateinit var questionsList: MutableList<Question>
-    private var currentQuestionNumber : Int = 1
+    var currentQuestionNumber : Int = 1
     lateinit var question : Question
     lateinit var shuffledAnswers : List<String>
-    private var questionsQuantity = -1
+    var questionsQuantity = -1
     private var _gameWon = MutableLiveData<Boolean>()
     val gameWon get() : LiveData<Boolean> = _gameWon
     private var _gameEnded = MutableLiveData<Boolean>()

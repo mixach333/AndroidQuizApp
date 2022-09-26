@@ -70,6 +70,10 @@ class GameFragment : Fragment() {
             radioButtonAnswer2.text = viewModel.shuffledAnswers[1]
             radioButtonAnswer3.text = viewModel.shuffledAnswers[2]
             radioButtonAnswer4.text = viewModel.shuffledAnswers[3]
+            questionNumber.text = getString(
+                R.string.question_number_now_and_total,
+                viewModel.currentQuestionNumber.toString(),
+                viewModel.questionsQuantity.toString())
         }
     }
 }

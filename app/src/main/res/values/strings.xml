@@ -12,4 +12,5 @@
     <string name="the_image">the image</string>
     <string name="rules_text_first">Select the answer from the options given. Each time you get an answer correct, you advance to the next question.</string>
     <string name="rules_text_second">If you get the answer wrong, your game ends! You can return to the title screen using up or back from within the game screen, and this will also end your game.</string>
+    <string name="question_number_now_and_total">Question: %1$s / %2$s</string>
 </resources>
