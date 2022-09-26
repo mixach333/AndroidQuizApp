@@ -30,8 +30,11 @@ class GameFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         updateQuestionsOnScreen()
         viewModel.gameWon.observe(viewLifecycleOwner) { gameWon ->
-            if (gameWon) view.findNavController()
-                .navigate(R.id.action_gameFragment_to_gameWonFragment)
+            if (gameWon) {
+                val action = GameFragmentDirections.actionGameFragmentToGameWonFragment(viewModel.score)
+                Log.d("m333", "$action")
+                view.findNavController().navigate(action)
+            }
         }
         viewModel.gameEnded.observe(viewLifecycleOwner) { gameEnded ->
             if (gameEnded) view.findNavController()
@@ -49,11 +52,6 @@ class GameFragment : Fragment() {
                     else -> viewModel.validateAnswer(binding.radioButtonAnswer4.text.toString())
                 }
             }
-            Log.d("m333", "idChecked is ${binding.radioGroupAnswers.checkedRadioButtonId}")
-            Log.d("m333", "id1 is ${binding.radioButtonAnswer1.id}")
-            Log.d("m333", "id2 is ${binding.radioButtonAnswer2.id}")
-            Log.d("m333", "id3 is ${binding.radioButtonAnswer3.id}")
-            Log.d("m333", "id4 is ${binding.radioButtonAnswer4.id}")
             binding.radioGroupAnswers.clearCheck()
             updateQuestionsOnScreen()
         }

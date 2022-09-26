@@ -1,6 +1,7 @@
 package com.mix333.androidquizapp.ui
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -19,6 +20,15 @@ class GameWonFragment : Fragment() {
     ): View? {
         _binding = FragmentGameWonBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        Log.d("m333", "GameWonFragment view created")
+        val result : Int = GameWonFragmentArgs.fromBundle(requireArguments()).resultScore
+        Log.d("m333", "received the arg: $result")
+        binding.congratsText.text = result.toString()
+        Log.d("m333", "result shown")
     }
 
     override fun onDestroyView() {

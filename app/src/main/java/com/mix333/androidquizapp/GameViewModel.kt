@@ -54,11 +54,9 @@ class GameViewModel : ViewModel() {
 
     fun validateAnswer(answer: String){
         if(answer.equals(question.answers[0])){
-            Log.d("m333", "answer is [${answer}], comparing to [${question.answers[0]}], true, score is $score")
             score++
             updateQuestionTextAndAnswers()
         } else {
-            Log.d("m333", "answer is ${answer}, comparing to ${question.answers[0]}, false, score is $score")
             updateQuestionTextAndAnswers()
         }
     }
