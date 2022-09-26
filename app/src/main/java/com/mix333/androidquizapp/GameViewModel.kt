@@ -1,5 +1,6 @@
 package com.mix333.androidquizapp
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -11,12 +12,15 @@ import kotlinx.coroutines.launch
 class GameViewModel : ViewModel() {
     private val receiverQuestionsListRepository = ReceiverQuestionsListRepository()
     private lateinit var questionsList: MutableList<Question>
-    var currentQuestionNumber : Int = 1
+    private var currentQuestionNumber : Int = 1
     lateinit var question : Question
     lateinit var shuffledAnswers : List<String>
-    var questionsQuantity = -1
+    private var questionsQuantity = -1
     private var _gameWon = MutableLiveData<Boolean>()
-    val gameWon : LiveData<Boolean> = _gameWon
+    val gameWon get() : LiveData<Boolean> = _gameWon
+    private var _gameEnded = MutableLiveData<Boolean>()
+    val gameEnded get() : LiveData<Boolean> = _gameEnded
+    var score = 0
 
     init {
         viewModelScope.launch {
@@ -33,25 +37,28 @@ class GameViewModel : ViewModel() {
     }
 
 
-    fun hasNextQuestionOrGameOver() : Boolean{
+    private fun hasNextQuestionOrGameOver(){
         val result = currentQuestionNumber<questionsQuantity
         if(result) {
             currentQuestionNumber++
         }else {
             _gameWon.value = true
         }
-        return result
     }
 
-    fun updateQuestionTextAndAnswers(){
+    private fun updateQuestionTextAndAnswers(){
+        hasNextQuestionOrGameOver()
         question = questionsList[currentQuestionNumber-1]
         shuffledAnswers = question.answers.shuffled()
     }
 
     fun validateAnswer(answer: String){
         if(answer.equals(question.answers[0])){
+            Log.d("m333", "answer is [${answer}], comparing to [${question.answers[0]}], true, score is $score")
+            score++
             updateQuestionTextAndAnswers()
         } else {
+            Log.d("m333", "answer is ${answer}, comparing to ${question.answers[0]}, false, score is $score")
             updateQuestionTextAndAnswers()
         }
     }
