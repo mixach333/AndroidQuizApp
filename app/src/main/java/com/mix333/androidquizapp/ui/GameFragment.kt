@@ -13,6 +13,8 @@ import com.mix333.androidquizapp.GameViewModel
 import com.mix333.androidquizapp.R
 import com.mix333.androidquizapp.databinding.FragmentGameBinding
 
+
+
 class GameFragment : Fragment() {
     private var _binding: FragmentGameBinding? = null
     private val binding get() = _binding!!
