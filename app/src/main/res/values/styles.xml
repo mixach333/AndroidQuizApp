@@ -13,15 +13,7 @@
         <item name="cornerRadius">24dp</item>
     </style>
 
-    <style name="roundedButtonSmallAsContent" parent="roundedButtonBig">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:backgroundTint">@color/primaryLightColor</item>
-        <item name="android:textSize">15sp</item>
-        <item name="android:textAllCaps">true</item>
-        <item name="android:elevation">4dp</item>
-        <item name="android:layout_gravity">center_horizontal</item>
-    </style>
+
 
     <style name="TextViewHeaderStyle">
         <item name="android:layout_margin">5dp</item>
@@ -31,12 +23,10 @@
         <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:elevation">4dp</item>
-        <item name="android:background">@color/secondaryLightColor</item>
     </style>
 
     <style name="roundedButtonBigRedGrey" parent="roundedButtonBig">
         <item name="android:backgroundTint">@color/grey</item>
-
         <item name="android:textColor">@color/red</item>
     </style>
 

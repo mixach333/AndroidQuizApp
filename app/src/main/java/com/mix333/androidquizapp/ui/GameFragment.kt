@@ -7,12 +7,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
+import android.widget.RadioGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import com.mix333.androidquizapp.GameViewModel
 import com.mix333.androidquizapp.R
 import com.mix333.androidquizapp.databinding.FragmentGameBinding
 
+fun RadioGroup.getCheckedText(view: View) : String{
+    var checkedId = this.checkedRadioButtonId
+    var result = ""
+    if(checkedId!=-1){
+        result = (view.findViewById<RadioButton>(checkedId)).text.toString()
+    }
+    return result
+}
 
 
 class GameFragment : Fragment() {
@@ -33,8 +42,8 @@ class GameFragment : Fragment() {
         updateQuestionsOnScreen()
         viewModel.gameWon.observe(viewLifecycleOwner) { gameWon ->
             if (gameWon) {
-                val action = GameFragmentDirections.actionGameFragmentToGameWonFragment(viewModel.score)
-                Log.d("m333", "$action")
+                val action = GameFragmentDirections.actionGameFragmentToGameWonFragment(
+                    viewModel.score, viewModel.getPercentage())
                 view.findNavController().navigate(action)
             }
         }
@@ -43,17 +52,8 @@ class GameFragment : Fragment() {
                 .navigate(R.id.action_gameFragment_to_gameOverFragment)
         }
         binding.submitAnswerButton.setOnClickListener {
-            val checkedId = binding.radioGroupAnswers.checkedRadioButtonId
-            val answerRadio = view.findViewById<RadioButton>(checkedId)
-            viewModel.validateAnswer(answerRadio.text.toString())
-            if(checkedId!=-1) {
-                when (checkedId) {
-                    binding.radioButtonAnswer1.id -> viewModel.validateAnswer(binding.radioButtonAnswer1.text.toString())
-                    binding.radioButtonAnswer2.id -> viewModel.validateAnswer(binding.radioButtonAnswer2.text.toString())
-                    binding.radioButtonAnswer3.id -> viewModel.validateAnswer(binding.radioButtonAnswer3.text.toString())
-                    else -> viewModel.validateAnswer(binding.radioButtonAnswer4.text.toString())
-                }
-            }
+            val answerToValidation = binding.radioGroupAnswers.getCheckedText(view)
+            if (answerToValidation!="") viewModel.validateAnswer(answerToValidation)
             binding.radioGroupAnswers.clearCheck()
             updateQuestionsOnScreen()
         }

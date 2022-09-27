@@ -15,11 +15,11 @@ class GameViewModel : ViewModel() {
     var currentQuestionNumber : Int = 1
     lateinit var question : Question
     lateinit var shuffledAnswers : List<String>
-    var questionsQuantity = -1
     private var _gameWon = MutableLiveData<Boolean>()
     val gameWon get() : LiveData<Boolean> = _gameWon
     private var _gameEnded = MutableLiveData<Boolean>()
     val gameEnded get() : LiveData<Boolean> = _gameEnded
+    var questionsQuantity = -1
     var score = 0
 
     init {
@@ -59,6 +59,10 @@ class GameViewModel : ViewModel() {
         } else {
             updateQuestionTextAndAnswers()
         }
+    }
+
+    fun getPercentage() : Int{
+        return ((score.toDouble()/questionsQuantity.toDouble())*100).toInt()
     }
 
 

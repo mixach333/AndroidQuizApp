@@ -55,6 +55,9 @@
         <argument
             android:name="resultScore"
             app:argType="integer" />
+        <argument
+            android:name="percentage"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/rulesFragment"
