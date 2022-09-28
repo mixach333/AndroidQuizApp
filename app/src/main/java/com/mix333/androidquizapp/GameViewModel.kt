@@ -42,7 +42,12 @@ class GameViewModel : ViewModel() {
         if(result) {
             currentQuestionNumber++
         }else {
-            _gameWon.value = true
+            if(getPercentage()<50) {
+                _gameEnded.value=true
+            }
+            else{
+                _gameWon.value = true
+            }
         }
     }
 
@@ -53,17 +58,11 @@ class GameViewModel : ViewModel() {
     }
 
     fun validateAnswer(answer: String){
-        if(answer.equals(question.answers[0])){
-            score++
-            updateQuestionTextAndAnswers()
-        } else {
-            updateQuestionTextAndAnswers()
-        }
+        if(answer.equals(question.answers[0])) score+=10
+        updateQuestionTextAndAnswers()
     }
 
     fun getPercentage() : Int{
-        return ((score.toDouble()/questionsQuantity.toDouble())*100).toInt()
+        return ((score.toDouble()/questionsQuantity.toDouble())*10).toInt()
     }
-
-
 }

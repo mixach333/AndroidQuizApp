@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import com.mix333.androidquizapp.GameViewModel
@@ -43,7 +44,8 @@ class GameFragment : Fragment() {
         viewModel.gameWon.observe(viewLifecycleOwner) { gameWon ->
             if (gameWon) {
                 val action = GameFragmentDirections.actionGameFragmentToGameWonFragment(
-                    viewModel.score, viewModel.getPercentage())
+                    viewModel.score, viewModel.getPercentage()
+                )
                 view.findNavController().navigate(action)
             }
         }
@@ -53,9 +55,11 @@ class GameFragment : Fragment() {
         }
         binding.submitAnswerButton.setOnClickListener {
             val answerToValidation = binding.radioGroupAnswers.getCheckedText(view)
-            if (answerToValidation!="") viewModel.validateAnswer(answerToValidation)
-            binding.radioGroupAnswers.clearCheck()
-            updateQuestionsOnScreen()
+            if (answerToValidation != "") {
+                viewModel.validateAnswer(answerToValidation)
+                binding.radioGroupAnswers.clearCheck()
+                updateQuestionsOnScreen()
+            }
         }
     }
 
@@ -66,16 +70,17 @@ class GameFragment : Fragment() {
 
     private fun updateQuestionsOnScreen() {
         binding.apply {
-            currentScore.text = viewModel.score.toString()
+            currentScore.text = getString(R.string.current_score, viewModel.score)
             questionText.text = viewModel.question.text
             radioButtonAnswer1.text = viewModel.shuffledAnswers[0]
             radioButtonAnswer2.text = viewModel.shuffledAnswers[1]
             radioButtonAnswer3.text = viewModel.shuffledAnswers[2]
             radioButtonAnswer4.text = viewModel.shuffledAnswers[3]
-            questionNumber.text = getString(
+            (activity as AppCompatActivity).supportActionBar?.title = getString(
                 R.string.question_number_now_and_total,
                 viewModel.currentQuestionNumber.toString(),
-                viewModel.questionsQuantity.toString())
+                viewModel.questionsQuantity.toString()
+            )
         }
     }
 }

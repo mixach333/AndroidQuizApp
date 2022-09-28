@@ -13,9 +13,9 @@
         tools:context=".ui.GameOverFragment">
 
         <ImageView
-            android:layout_width="232dp"
-            android:layout_height="372dp"
-            android:layout_margin="20dp"
+            android:layout_width="175dp"
+            android:layout_height="175dp"
+            android:layout_margin="10dp"
             android:src="@drawable/ic_baseline_sentiment_dissatisfied_24" />
 
         <TextView
@@ -24,14 +24,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:text="You've lost!" />
+            android:gravity="center_horizontal"
+            android:text="@string/end_game_text" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
 
         <Button
-            android:id="@+id/button2"
+            android:layout_margin="8dp"
+            android:id="@+id/start_new_game_after_game_ended_button"
             style="@style/roundedButtonBigRedGrey"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Start a new game" />
+
+        <Button
+            android:layout_margin="8dp"
+            android:id="@+id/get_to_title_after_game_ended_button"
+            style="@style/roundedButtonBigRedGrey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Get to the title" />
 
     </LinearLayout>
 </layout>
