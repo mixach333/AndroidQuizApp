@@ -2,7 +2,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -10,144 +9,139 @@
         app:cardCornerRadius="16dp"
         app:cardElevation="6dp"
         tools:context=".ui.GameFragment">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="15dp">
-
-
-            <TextView
-                android:layout_margin="10dp"
-                android:id="@+id/currentScore"
+            android:orientation="vertical">
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center|end"
-                app:layout_constraintBottom_toTopOf="@id/cardViewQuestion"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.92"
-                tools:text="Score: 100" />
-
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardViewQuestion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="5dp"
-                app:layout_constraintBottom_toTopOf="@id/imageViewQuestionMark"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.16000003">
-
+                android:layout_margin="15dp">
                 <TextView
-                    android:id="@+id/questionText"
+                    android:id="@+id/currentScore"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="6dp"
-                    android:gravity="center"
-                    android:text="Here will be the question for your test. Each question is formed by shuffling the array of questions. Each question is unique, quantity of actions is dynamic, but at least 5 questions will be generated" />
-            </androidx.cardview.widget.CardView>
-
-
-            <ImageView
-                android:id="@+id/imageViewQuestionMark"
-                android:layout_width="161dp"
-                android:layout_height="139dp"
-                android:src="@drawable/voprosu"
-                app:layout_constraintBottom_toTopOf="@id/cardViewAnswers"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cardViewQuestion" />
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardViewAnswers"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="5dp"
-                app:layout_constraintBottom_toTopOf="@id/submitAnswerButton"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/imageViewQuestionMark">
-
-                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:gravity="center|end"
+                    app:layout_constraintBottom_toTopOf="@id/cardViewQuestion"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.92"
+                    tools:text="Score: 100" />
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewQuestion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:layout_constraintBottom_toTopOf="@id/imageViewQuestionMark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.16000003">
 
                     <TextView
+                        android:id="@+id/questionText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="6dp"
                         android:gravity="center"
-                        android:text="Select your answer:" />
+                        android:text="Here will be the question for your test. Each question is formed by shuffling the array of questions. Each question is unique, quantity of actions is dynamic, but at least 5 questions will be generated" />
+                </androidx.cardview.widget.CardView>
 
-                    <RadioGroup
-                        android:id="@+id/radioGroupAnswers"
+
+                <ImageView
+                    android:id="@+id/imageViewQuestionMark"
+                    android:layout_width="161dp"
+                    android:layout_height="139dp"
+                    android:src="@drawable/voprosu"
+                    app:layout_constraintBottom_toTopOf="@id/cardViewAnswers"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardViewQuestion" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewAnswers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imageViewQuestionMark">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <RadioButton
-                            android:id="@+id/radioButtonAnswer1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="First option. Additional text to test the layout. Repeat. First option. Additional text to test the layout.  "
-                            />
-                        <RadioButton
-                            android:id="@+id/radioButtonAnswer2"
+                            android:layout_margin="6dp"
+                            android:gravity="center"
+                            android:text="Select your answer:" />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroupAnswers"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Second option. Additional text to test the layout. Repeat. Second option. Additional text to test the layout.  "
-                            />
-                        <RadioButton
-                            android:id="@+id/radioButtonAnswer3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Third option. Additional text to test the layout. Repeat. Third option. Additional text to test the layout.  "
-                            />
-                        <RadioButton
-                            android:id="@+id/radioButtonAnswer4"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Fourth option. Additional text to test the layout. Repeat. Fourth option. Additional text to test the layout.  "
-                            />
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/radioButtonAnswer1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="First option. Additional text to test the layout. Repeat. First option. Additional text to test the layout.  " />
+
+                            <RadioButton
+                                android:id="@+id/radioButtonAnswer2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Second option. Additional text to test the layout. Repeat. Second option. Additional text to test the layout.  " />
+
+                            <RadioButton
+                                android:id="@+id/radioButtonAnswer3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Third option. Additional text to test the layout. Repeat. Third option. Additional text to test the layout.  " />
+
+                            <RadioButton
+                                android:id="@+id/radioButtonAnswer4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Fourth option. Additional text to test the layout. Repeat. Fourth option. Additional text to test the layout.  " />
 
 
-
-                    </RadioGroup>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
+                        </RadioGroup>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
             <Button
                 android:id="@+id/submitAnswerButton"
+                style="@style/roundedButtonBig"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Submit Answer"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardViewAnswers"
-                app:layout_constraintBottom_toTopOf="@id/endGameButton"
-                style="@style/roundedButtonBig"
                 android:backgroundTint="@color/grey"
-                android:textColor="@color/red"/>
+                android:text="Submit Answer"
+                android:textColor="@color/red" />
 
             <Button
                 android:id="@+id/endGameButton"
-                android:text="End Game"
+                style="@style/roundedButtonBig"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/submitAnswerButton"
-                app:layout_constraintBottom_toBottomOf="parent"
-                style="@style/roundedButtonBig"
                 android:backgroundTint="@color/grey"
-                android:textColor="@color/red"/>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:text="End Game"
+                android:textColor="@color/red"
+                android:layout_marginBottom="10dp"/>
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 </layout>

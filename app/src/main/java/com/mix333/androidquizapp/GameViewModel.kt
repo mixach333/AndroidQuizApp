@@ -1,6 +1,5 @@
 package com.mix333.androidquizapp
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -12,8 +11,8 @@ import kotlinx.coroutines.launch
 class GameViewModel : ViewModel() {
     private val receiverQuestionsListRepository = ReceiverQuestionsListRepository()
     private lateinit var questionsList: MutableList<Question>
-    var currentQuestionNumber : Int = 1
     lateinit var question : Question
+    var currentQuestionNumber : Int = 1
     lateinit var shuffledAnswers : List<String>
     private var _gameWon = MutableLiveData<Boolean>()
     val gameWon get() : LiveData<Boolean> = _gameWon
