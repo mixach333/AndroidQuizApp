@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_or_margin_largest">14dp</dimen>
+    <dimen name="padding_or_margin_large">10dp</dimen>
+    <dimen name="padding_or_margin_big">7dp</dimen>
+    <dimen name="padding_or_margin_medium">4dp</dimen>
+    <dimen name="padding_or_margin_small">2dp</dimen>
+    <dimen name="card_corner_radius_large">14dp</dimen>
+    <dimen name="card_corner_radius_big">10dp</dimen>
+    <dimen name="card_corner_radius_medium">7dp</dimen>
+    <dimen name="card_corner_radius_small">4dp</dimen>
+    <dimen name="card_elevation_big">7dp</dimen>
+    <dimen name="card_elevation_small">3dp</dimen>
+    <dimen name="text_size_largest">23sp</dimen>
+    <dimen name="text_size_large">17sp</dimen>
+    <dimen name="text_size_big">12sp</dimen>
+    <dimen name="text_size_medium">9sp</dimen>
+    <dimen name="text_size_small">7sp</dimen>
+    <dimen name="text_size_smallest">5sp</dimen>
+    <dimen name="image_square_size">82dp</dimen>
+    </resources>
