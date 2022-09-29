@@ -42,7 +42,7 @@ class GameViewModel : ViewModel() {
         if(result) {
             currentQuestionNumber++
         }else {
-            if(getPercentage()<50) {
+            if(getPercentage()<80) {
                 _gameEnded.value=true
             }
             else{

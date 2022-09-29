@@ -11,10 +11,10 @@
     <string name="welcome_text">Welcome to the Android Quiz App. Here you can test your knowledge of Android and Kotlin. The amount of questions is dynamic, but at least 5. Passing this test, you can be sure that you know basics of Android Developement.</string>
     <string name="the_image">the image</string>
     <string name="rules_text_first">Select the answer from the options given. Each time you get an answer correct, you advance to the next question.</string>
-    <string name="rules_text_second">If you get the answer wrong, your game ends! You can return to the title screen using up or back from within the game screen, and this will also end your game.</string>
+    <string name="rules_text_second">If you get the 80\u0025 of the answers wrong, your game ends! You can return to the title screen using up or back from within the game screen, and this will also end your game.</string>
     <string name="question_number_now_and_total">Question: %1$s / %2$s</string>
     <string name="congrats_text">Nice run! You scored %1$s points! It\'s %2$s of possible result!</string>
     <string name="congrats_not_perfect">It\'s not perfect, but you can improve your results. Just keep studying and you will become better and better!</string>
     <string name="current_score">Score: %d</string>
-    <string name="end_game_text">You\'ve lost! You\'ve chosen less than 50\u0025 of correct answers. \n Or may be you have canceled \n the game(tapped the \"END GAME\" button). \n\n You can start a new game by pressing the button below.\n Or you can go back to the title screen.</string>
+    <string name="end_game_text">You\'ve lost! You\'ve chosen less than 80\u0025 of correct answers. \n Or may be you have canceled \n the game(tapped the \"END GAME\" button). \n\n You can start a new game by pressing the button below.\n Or you can go back to the title screen.</string>
 </resources>
