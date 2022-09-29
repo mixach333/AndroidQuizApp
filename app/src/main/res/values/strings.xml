@@ -16,5 +16,5 @@
     <string name="congrats_text">Nice run! You scored %1$s points! It\'s %2$s of possible result!</string>
     <string name="congrats_not_perfect">It\'s not perfect, but you can improve your results. Just keep studying and you will become better and better!</string>
     <string name="current_score">Score: %d</string>
-    <string name="end_game_text">You\'ve lost! You\'ve chosen less than 50\u0025 of correct answers. \n Or may be you have canceled \n the game(tapped the back button). \n\n You can start a new game by pressing the button below.\n Or you can go back to the title screen.</string>
+    <string name="end_game_text">You\'ve lost! You\'ve chosen less than 50\u0025 of correct answers. \n Or may be you have canceled \n the game(tapped the \"END GAME\" button). \n\n You can start a new game by pressing the button below.\n Or you can go back to the title screen.</string>
 </resources>

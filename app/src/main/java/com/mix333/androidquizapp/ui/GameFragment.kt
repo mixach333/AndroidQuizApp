@@ -61,6 +61,9 @@ class GameFragment : Fragment() {
                 updateQuestionsOnScreen()
             }
         }
+        binding.endGameButton.setOnClickListener {
+            view.findNavController().navigate(R.id.action_gameFragment_to_gameOverFragment)
+        }
     }
 
     override fun onDestroyView() {
