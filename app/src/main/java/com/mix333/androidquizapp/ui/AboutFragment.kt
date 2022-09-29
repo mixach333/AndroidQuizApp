@@ -10,6 +10,12 @@ import com.mix333.androidquizapp.R
 import com.mix333.androidquizapp.databinding.FragmentAboutBinding
 
 class AboutFragment : Fragment() {
+    /**
+     * TODO consider BaseFragment approach or delegate in order to avoid making binding null everywhere.
+     * TODO check https://gist.github.com/Zhuinden/ea3189198938bd16c03db628e084a4fa ,
+     * TODO https://stackoverflow.com/questions/64819181/how-to-make-basefragment-with-view-binding
+     */
+
     private var _binding : FragmentAboutBinding? = null
     private val binding get() = _binding!!
 

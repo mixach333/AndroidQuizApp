@@ -3,6 +3,7 @@ package com.mix333.androidquizapp.repository
 import com.mix333.androidquizapp.model.Question
 
 class ReceiverQuestionsListRepository {
+    // TODO remove redundant 'suspend' modifier
     suspend fun receiveQuestions() = mutableListOf(
         Question(
             text = "What is Android Jetpack?",

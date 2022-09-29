@@ -13,6 +13,7 @@ import kotlinx.coroutines.launch
 
 
 class MainActivity : AppCompatActivity() {
+    //TODO private var
     lateinit var navController: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

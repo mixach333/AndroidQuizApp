@@ -1,5 +1,6 @@
 package com.mix333.androidquizapp.ui
 
+//TODO remove unused imports
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log

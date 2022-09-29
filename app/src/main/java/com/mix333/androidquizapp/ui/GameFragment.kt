@@ -1,5 +1,6 @@
 package com.mix333.androidquizapp.ui
 
+//TODO remove unused imports
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -15,7 +16,9 @@ import com.mix333.androidquizapp.GameViewModel
 import com.mix333.androidquizapp.R
 import com.mix333.androidquizapp.databinding.FragmentGameBinding
 
+// TODO Move that extension func to some Util class or at least after the main Fragment class
 fun RadioGroup.getCheckedText(view: View) : String{
+    //TODO Variable is never modified so it can be declared using 'val'
     var checkedId = this.checkedRadioButtonId
     var result = ""
     if(checkedId!=-1){
