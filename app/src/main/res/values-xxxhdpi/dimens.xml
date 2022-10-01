@@ -13,9 +13,9 @@
     <dimen name="card_elevation_small">7dp</dimen>
     <dimen name="text_size_largest">46sp</dimen>
     <dimen name="text_size_large">33sp</dimen>
-    <dimen name="text_size_big">24sp</dimen>
-    <dimen name="text_size_medium">18sp</dimen>
-    <dimen name="text_size_small">14sp</dimen>
-    <dimen name="text_size_smallest">9sp</dimen>
+    <dimen name="text_size_big">20sp</dimen>
+    <dimen name="text_size_medium">17sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_smallest">8sp</dimen>
     <dimen name="image_square_size">165dp</dimen>
     </resources>

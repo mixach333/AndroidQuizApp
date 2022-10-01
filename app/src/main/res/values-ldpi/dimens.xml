@@ -4,13 +4,13 @@
     <dimen name="padding_or_margin_large">4dp</dimen>
     <dimen name="padding_or_margin_big">3dp</dimen>
     <dimen name="padding_or_margin_medium">2dp</dimen>
-    <dimen name="padding_or_margin_small">1dp</dimen>
+    <dimen name="padding_or_margin_small">0dp</dimen>
     <dimen name="card_corner_radius_large">5dp</dimen>
     <dimen name="card_corner_radius_big">4dp</dimen>
     <dimen name="card_corner_radius_medium">3dp</dimen>
-    <dimen name="card_corner_radius_small">2dp</dimen>
+    <dimen name="card_corner_radius_small">1dp</dimen>
     <dimen name="card_elevation_big">2dp</dimen>
-    <dimen name="card_elevation_small">2dp</dimen>
+    <dimen name="card_elevation_small">1dp</dimen>
     <dimen name="text_size_largest">9sp</dimen>
     <dimen name="text_size_large">6sp</dimen>
     <dimen name="text_size_big">5sp</dimen>
