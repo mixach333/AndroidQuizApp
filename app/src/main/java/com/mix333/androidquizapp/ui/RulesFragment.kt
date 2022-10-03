@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import com.mix333.androidquizapp.R
 import com.mix333.androidquizapp.databinding.FragmentRulesBinding
-import com.mix333.androidquizapp.databinding.FragmentTitleBinding
 
 
 class RulesFragment : Fragment() {
@@ -18,7 +17,7 @@ class RulesFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentRulesBinding.inflate(inflater, container, false)
         binding.backToTitleButton.setOnClickListener {
             it.findNavController().navigate(R.id.action_rulesFragment_to_titleFragment)

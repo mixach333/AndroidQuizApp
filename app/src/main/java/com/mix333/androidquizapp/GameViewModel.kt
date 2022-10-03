@@ -8,6 +8,8 @@ import com.mix333.androidquizapp.model.Question
 import com.mix333.androidquizapp.repository.ReceiverQuestionsListRepository
 import kotlinx.coroutines.launch
 
+
+
 class GameViewModel : ViewModel() {
     private val receiverQuestionsListRepository = ReceiverQuestionsListRepository()
     private lateinit var questionsList: MutableList<Question>
@@ -57,7 +59,7 @@ class GameViewModel : ViewModel() {
     }
 
     fun validateAnswer(answer: String){
-        if(answer.equals(question.answers[0])) score+=10
+        if(answer==question.answers[0]) score+=10
         updateQuestionTextAndAnswers()
     }
 

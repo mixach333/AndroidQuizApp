@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import com.mix333.androidquizapp.R
 import com.mix333.androidquizapp.databinding.FragmentGameOverBinding
-import com.mix333.androidquizapp.databinding.FragmentTitleBinding
 
 class GameOverFragment : Fragment() {
     private var _binding : FragmentGameOverBinding? = null

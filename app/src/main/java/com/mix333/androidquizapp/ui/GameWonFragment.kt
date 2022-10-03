@@ -2,7 +2,6 @@ package com.mix333.androidquizapp.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -11,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import com.mix333.androidquizapp.R
 import com.mix333.androidquizapp.databinding.FragmentGameWonBinding
-import com.mix333.androidquizapp.databinding.FragmentTitleBinding
 
 class GameWonFragment : Fragment() {
     private var _binding : FragmentGameWonBinding? = null

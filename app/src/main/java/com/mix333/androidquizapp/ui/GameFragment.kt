@@ -1,28 +1,17 @@
 package com.mix333.androidquizapp.ui
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.RadioButton
-import android.widget.RadioGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import com.mix333.androidquizapp.GameViewModel
 import com.mix333.androidquizapp.R
 import com.mix333.androidquizapp.databinding.FragmentGameBinding
-
-fun RadioGroup.getCheckedText(view: View) : String{
-    var checkedId = this.checkedRadioButtonId
-    var result = ""
-    if(checkedId!=-1){
-        result = (view.findViewById<RadioButton>(checkedId)).text.toString()
-    }
-    return result
-}
+import com.mix333.androidquizapp.getCheckedText
 
 
 class GameFragment : Fragment() {
