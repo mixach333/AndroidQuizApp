@@ -183,6 +183,42 @@ class ReceiverQuestionsListRepository {
                 "Job",
                 "GlobalScope"
             )
+        ),
+        Question(
+            text = "You can create an emulator to simulate the configuration of a particular type of Android device using a tool like ___.",
+            answers = listOf(
+                "AVD Manager",
+                "Virtual Editor",
+                "Android SDK Manager",
+                "Theme Editor"
+            )
+        ),
+        Question(
+            text = "What parameter specifies the Android API level that Gradle should use to compile your app?",
+            answers = listOf(
+                "compileSdkVersion",
+                "minSdkVersion",
+                "targetSdkVersion",
+                "testSdkVersion"
+            )
+        ),
+        Question(
+            text = "Which of the following is not true about fragments?",
+            answers = listOf(
+                "It is not possible to remove a fragment while the activity is running.",
+                "A fragment has its own lifecycle and receives its own input events.",
+                "A fragment is defined in a Kotlin class.",
+                "A fragment's UI is defined in an XML layout file."
+            )
+        ),
+        Question(
+            text = "What phrase means that the compiler validates types while compiling?",
+            answers = listOf(
+                "Type safety",
+                "Data binding",
+                "Type validation",
+                "Wrong text"
+            )
         )
     )
 }
