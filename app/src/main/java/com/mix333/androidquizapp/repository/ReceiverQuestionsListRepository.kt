@@ -3,7 +3,7 @@ package com.mix333.androidquizapp.repository
 import com.mix333.androidquizapp.model.Question
 
 class ReceiverQuestionsListRepository {
-    suspend fun receiveQuestions() = mutableListOf(
+    fun receiveQuestions() = mutableListOf(
         Question(
             text = "What is Android Jetpack?",
             answers = listOf("all of these", "tools", "documentation", "libraries")
