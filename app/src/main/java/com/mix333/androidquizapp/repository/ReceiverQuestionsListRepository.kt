@@ -219,6 +219,51 @@ class ReceiverQuestionsListRepository {
                 "Type validation",
                 "Wrong text"
             )
+        ),
+        Question(
+            text = "To keep the UI running smoothly, use ___ for long-running tasks, such as all database operations.",
+            answers = listOf(
+                "coroutines",
+                "ViewModels",
+                "returns" ,
+                "managed threads"
+            )
+        ),
+        Question(
+            text = "On which thread services work in android?",
+            answers = listOf(
+                "Main Thread",
+                "Own Thread",
+                "Worker Thread",
+                "None of the above."
+            )
+        ),
+        Question(
+            text = "How to store heavy structured data in android?",
+            answers = listOf(
+                "SQlite database",
+                "Cursor",
+                "Shared Preferences",
+                "Not possible"
+            )
+        ),
+        Question(
+            text = "What is breakpoint in android?",
+            answers = listOf(
+                "Breaks the execution.",
+                "Breaks the development code",
+                "Breaks the application",
+                "None of the above."
+            )
+        ),
+        Question(
+            text = "What is the purpose of super.onCreate() in android?",
+            answers = listOf(
+                "To create a graphical window for subclass",
+                "To create an activity",
+                "It allows the developers to write the program",
+                "None of the above"
+            )
         )
     )
 }
