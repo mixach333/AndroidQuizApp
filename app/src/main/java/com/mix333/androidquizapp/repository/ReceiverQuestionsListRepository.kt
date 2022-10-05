@@ -235,7 +235,7 @@ class ReceiverQuestionsListRepository {
                 "Main Thread",
                 "Own Thread",
                 "Worker Thread",
-                "None of the above."
+                "Service Thread."
             )
         ),
         Question(
@@ -253,7 +253,7 @@ class ReceiverQuestionsListRepository {
                 "Breaks the execution.",
                 "Breaks the development code",
                 "Breaks the application",
-                "None of the above."
+                "Breaks the asynchronous operations."
             )
         ),
         Question(
@@ -262,7 +262,7 @@ class ReceiverQuestionsListRepository {
                 "To create a graphical window for subclass",
                 "To create an activity",
                 "It allows the developers to write the program",
-                "None of the above"
+                "Nothing of those"
             )
         )
     )

@@ -10,17 +10,14 @@ import androidx.navigation.findNavController
 import com.mix333.androidquizapp.R
 import com.mix333.androidquizapp.databinding.FragmentGameOverBinding
 
-class GameOverFragment : Fragment() {
-    private var _binding : FragmentGameOverBinding? = null
-    private val binding get() = _binding!!
+class GameOverFragment : BaseFragment<FragmentGameOverBinding>(FragmentGameOverBinding::inflate) {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentGameOverBinding.inflate(inflater, container, false)
+        super.onCreateView(inflater, container, savedInstanceState)
         (activity as AppCompatActivity).supportActionBar?.title = "Game Ended!"
-        // Inflate the layout for this fragment
         return binding.root
     }
 
@@ -32,10 +29,5 @@ class GameOverFragment : Fragment() {
         binding.getToTitleAfterGameEndedButton.setOnClickListener {
             view.findNavController().navigate(R.id.action_gameOverFragment_to_titleFragment)
         }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

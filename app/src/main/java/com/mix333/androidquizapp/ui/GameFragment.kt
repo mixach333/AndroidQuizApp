@@ -14,16 +14,13 @@ import com.mix333.androidquizapp.databinding.FragmentGameBinding
 import com.mix333.androidquizapp.getCheckedText
 
 
-class GameFragment : Fragment() {
-    private var _binding: FragmentGameBinding? = null
-    private val binding get() = _binding!!
+class GameFragment : BaseFragment<FragmentGameBinding>(FragmentGameBinding::inflate){
     private val viewModel: GameViewModel by viewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentGameBinding.inflate(inflater, container, false)
-        // Inflate the layout for this fragment
+        super.onCreateView(inflater, container, savedInstanceState)
         return binding.root
     }
 
@@ -53,11 +50,6 @@ class GameFragment : Fragment() {
         binding.endGameButton.setOnClickListener {
             view.findNavController().navigate(R.id.action_gameFragment_to_gameOverFragment)
         }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 
     private fun updateQuestionsOnScreen() {

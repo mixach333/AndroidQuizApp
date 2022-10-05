@@ -10,23 +10,16 @@ import com.mix333.androidquizapp.R
 import com.mix333.androidquizapp.databinding.FragmentRulesBinding
 
 
-class RulesFragment : Fragment() {
-    private var _binding : FragmentRulesBinding? = null
-    private val binding get()= _binding!!
+class RulesFragment : BaseFragment<FragmentRulesBinding>(FragmentRulesBinding::inflate) {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentRulesBinding.inflate(inflater, container, false)
+        super.onCreateView(inflater, container, savedInstanceState)
         binding.backToTitleButton.setOnClickListener {
             it.findNavController().navigate(R.id.action_rulesFragment_to_titleFragment)
         }
         return binding.root
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

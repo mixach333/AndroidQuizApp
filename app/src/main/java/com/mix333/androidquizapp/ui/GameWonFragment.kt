@@ -7,19 +7,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat.startActivity
 import androidx.navigation.findNavController
 import com.mix333.androidquizapp.R
 import com.mix333.androidquizapp.databinding.FragmentGameWonBinding
 
-class GameWonFragment : Fragment() {
-    private var _binding : FragmentGameWonBinding? = null
-    private val binding get()= _binding!!
+class GameWonFragment : BaseFragment<FragmentGameWonBinding>(FragmentGameWonBinding::inflate) {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentGameWonBinding.inflate(inflater, container, false)
+        super.onCreateView(inflater, container, savedInstanceState)
         (activity as AppCompatActivity).supportActionBar?.title = "Game Won!"
             return binding.root
     }
@@ -46,10 +45,5 @@ class GameWonFragment : Fragment() {
                 startActivity(shareIntent)
             }
         }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

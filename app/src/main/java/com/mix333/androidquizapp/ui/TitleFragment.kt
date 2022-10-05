@@ -9,15 +9,13 @@ import androidx.navigation.findNavController
 import com.mix333.androidquizapp.R
 import com.mix333.androidquizapp.databinding.FragmentTitleBinding
 
-class TitleFragment : Fragment() {
-    private var _binding : FragmentTitleBinding? = null
-    private val binding get() = requireNotNull(_binding)
+class TitleFragment : BaseFragment<FragmentTitleBinding>(FragmentTitleBinding::inflate) {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentTitleBinding.inflate(inflater, container, false)
+        super.onCreateView(inflater, container, savedInstanceState)
         binding.startTheGameButton.setOnClickListener{
             it.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)
         }
@@ -28,10 +26,5 @@ class TitleFragment : Fragment() {
             it.findNavController().navigate(R.id.action_titleFragment_to_rulesFragment)
         }
         return binding.root
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }
