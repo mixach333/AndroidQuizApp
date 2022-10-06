@@ -27,23 +27,25 @@ class GameWonFragment : BaseFragment<FragmentGameWonBinding>(FragmentGameWonBind
         super.onViewCreated(view, savedInstanceState)
         val result : Int = GameWonFragmentArgs.fromBundle(requireArguments()).resultScore
         val percentage : Int = GameWonFragmentArgs.fromBundle(requireArguments()).percentage
-        val percentage1 = "$percentage%"
-        binding.congratsTextView.text = getString(R.string.congrats_text, result.toString(), percentage1)
-        if(percentage!=100) {
-            binding.congratsNotPerfectHolder.visibility = View.VISIBLE
-            binding.congratsNotPerfectTextView.text = getString(R.string.congrats_not_perfect)
-                    }
-        binding.startNewGameButton.setOnClickListener {
-            it.findNavController().navigate(R.id.action_gameWonFragment_to_titleFragment)
-        }
-        binding.shareResultButton.setOnClickListener{
-            val shareIntent = Intent(Intent.ACTION_SEND)
-                .setType("text/plain")
-                .putExtra(Intent.EXTRA_TEXT,
-                    "Hey! My score is $result! Come and join me on AndroidQuizApp!")
-            if(activity?.packageManager?.resolveActivity(shareIntent, 0)!=null){
-                startActivity(shareIntent)
+        val percentageToDisplay = "$percentage%"
+        binding.apply{
+            congratsTextView.text = getString(R.string.congrats_text, result.toString(), percentageToDisplay)
+            if(percentage!=100) {
+                congratsNotPerfectHolder.visibility = View.VISIBLE
+                congratsNotPerfectTextView.text = getString(R.string.congrats_not_perfect)
             }
-        }
+            startNewGameButton.setOnClickListener {
+                it.findNavController().navigate(R.id.action_gameWonFragment_to_titleFragment)
+            }
+            shareResultButton.setOnClickListener{
+                val shareIntent = Intent(Intent.ACTION_SEND)
+                    .setType("text/plain")
+                    .putExtra(Intent.EXTRA_TEXT,
+                        "Hey! My score is $result! Come and join me on AndroidQuizApp!")
+                if(activity?.packageManager?.resolveActivity(shareIntent, 0)!=null){
+                    startActivity(shareIntent)
+                }
+            }}
+
     }
 }

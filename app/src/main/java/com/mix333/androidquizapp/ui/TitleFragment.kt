@@ -16,14 +16,16 @@ class TitleFragment : BaseFragment<FragmentTitleBinding>(FragmentTitleBinding::i
         savedInstanceState: Bundle?
     ): View {
         super.onCreateView(inflater, container, savedInstanceState)
-        binding.startTheGameButton.setOnClickListener{
-            it.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)
-        }
-        binding.aboutButton.setOnClickListener {
-            it.findNavController().navigate(R.id.action_titleFragment_to_aboutFragment)
-        }
-        binding.readTheRulesButton.setOnClickListener {
-            it.findNavController().navigate(R.id.action_titleFragment_to_rulesFragment)
+        binding.apply{
+            startTheGameButton.setOnClickListener{
+                it.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)
+            }
+            aboutButton.setOnClickListener {
+                it.findNavController().navigate(R.id.action_titleFragment_to_aboutFragment)
+            }
+            readTheRulesButton.setOnClickListener {
+                it.findNavController().navigate(R.id.action_titleFragment_to_rulesFragment)
+            }
         }
         return binding.root
     }

@@ -23,11 +23,14 @@ class GameOverFragment : BaseFragment<FragmentGameOverBinding>(FragmentGameOverB
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.startNewGameAfterGameEndedButton.setOnClickListener {
-            view.findNavController().navigate(R.id.action_gameOverFragment_to_gameFragment)
+        binding.apply{
+            startNewGameAfterGameEndedButton.setOnClickListener {
+                view.findNavController().navigate(R.id.action_gameOverFragment_to_gameFragment)
+            }
+            getToTitleAfterGameEndedButton.setOnClickListener {
+                view.findNavController().navigate(R.id.action_gameOverFragment_to_titleFragment)
+            }
         }
-        binding.getToTitleAfterGameEndedButton.setOnClickListener {
-            view.findNavController().navigate(R.id.action_gameOverFragment_to_titleFragment)
-        }
+
     }
 }
